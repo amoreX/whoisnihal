@@ -50,7 +50,7 @@ const components = {
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      'hover:text-yellow-500 rounded-xl p-2 !w-full block';
+      'hover:text-yellow-500 rounded-xl p-2 !w-full flex';
     if (href?.startsWith('/')) {
       return (
         <Link href={href} className={className} {...props}>
