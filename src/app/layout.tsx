@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif, Instrument_Sans, Instrument_Serif, Inter, Noto_Serif, Playfair_Display, Poppins, Source_Serif_4, Work_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
+import Background from "@/components/background/Background";
 
 
 
@@ -29,7 +30,8 @@ export default function RootLayout({
       <body
         className={`${fontPrimary.className} ${fontMono.variable}  antialiased flex justify-center`}
       >
-         <div className="max-w-4xl w-full px-4">
+        <Background />
+         <div className="max-w-4xl w-full px-4 z-50">
           {children}
           <Footer />
          </div>
