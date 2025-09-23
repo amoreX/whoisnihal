@@ -1,6 +1,7 @@
 import React, { ComponentPropsWithoutRef } from 'react';
 import Link from 'next/link';
 import { highlight } from 'sugar-high';
+import { LinkIcon } from '@phosphor-icons/react/dist/ssr';
 
 type HeadingProps = ComponentPropsWithoutRef<'h1'>;
 type ParagraphProps = ComponentPropsWithoutRef<'p'>;
@@ -15,7 +16,7 @@ const components = {
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-gray-800 text-xl border-b border-stone-600 w-fit dark:text-white font-medium  pb-2 mt-8 mb-3"
+      className="text-gray-800 text-xl border-b border-zinc-600 w-fit dark:text-white font-medium  pb-2 mt-8 mb-3"
       {...props}
     />
   ),
@@ -27,17 +28,17 @@ const components = {
   ),
   h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
   p: (props: ParagraphProps) => (
-    <p className="text-gray-800 dark:text-stone-300 leading-snug" {...props} />
+    <p className="text-gray-800 dark:text-zinc-300 leading-snug" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol
-      className="text-gray-800 dark:text-stone-300  space-y-2"
+      className="text-gray-800 dark:text-zinc-300  space-y-2"
       {...props}
     />
   ),
   ul: (props: ListProps) => (
     <ul
-      className="text-gray-800 dark:text-stone-300  space-y-2 w-full"
+      className="text-gray-800 dark:text-zinc-300  space-y-0 w-full"
       {...props}
     />
   ),
@@ -50,18 +51,18 @@ const components = {
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      'hover:text-yellow-500 rounded-xl !w-full flex';
+      'hover:text-accent rounded-xl hover:underline !w-full items-center gap-2 flex group';
     if (href?.startsWith('/')) {
       return (
         <Link href={href} className={className} {...props}>
-          {children}
+          {children} 
         </Link>
       );
     }
     if (href?.startsWith('#')) {
       return (
         <a href={href} className={className} {...props}>
-          {children}
+          {children} 
         </a>
       );
     }
@@ -73,7 +74,7 @@ const components = {
         className={className}
         {...props}
       >
-        {children}
+        {children} <LinkIcon className='group-hover:opacity-100 opacity-0' />
       </a>
     );
   },
@@ -103,7 +104,7 @@ const components = {
   ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
-      className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700 dark:border-stone-600 dark:text-stone-300"
+      className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700 dark:border-zinc-600 dark:text-zinc-300"
       {...props}
     />
   ),
