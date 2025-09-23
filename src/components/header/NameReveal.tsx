@@ -6,8 +6,6 @@ import { motion, AnimatePresence } from "motion/react";
 const NameReveal = () => {
   return (
     <div className="text-5xl  tracking-tighter inline relative">
-        
-
       {"ronish rohan".split("").map((letter, index) => (
         <motion.div
           initial={{ opacity: 0, color: "rgb(255,0,0)" }}

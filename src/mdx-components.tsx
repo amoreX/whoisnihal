@@ -15,13 +15,13 @@ const components = {
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-gray-800  dark:text-zinc-200 font-medium  pb-2 mt-8 mb-3"
+      className="text-gray-800 text-xl border-b border-zinc-600 w-fit dark:text-white font-medium  pb-2 mt-8 mb-3"
       {...props}
     />
   ),
   h3: (props: HeadingProps) => (
     <h3
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
+      className="text-gray-800 dark:text-white font-medium mt-8 mb-3"
       {...props}
     />
   ),
