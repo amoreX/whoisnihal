@@ -5,11 +5,12 @@ import {
   SuitcaseIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
+import NameReveal from "./NameReveal";
 
 const Header = () => {
   return (
     <div className="mt-[150px] flex w-full flex-col">
-      <div className="text-5xl  tracking-tighter ">ronish</div>
+      <NameReveal/>
       <div className="w-full mt-6  flex flex-col">
         <div className="flex gap-2 items-center font-medium text-zinc-400">
           <GlobeHemisphereEastIcon size={20} /> Bengaluru, India

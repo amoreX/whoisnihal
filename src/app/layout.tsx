@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const fontPrimary = IBM_Plex_Serif({
-  weight: ["400"],
+  weight: ["100","200","300","400", "500","600","700"],
 })
 
 const fontMono = IBM_Plex_Mono({
