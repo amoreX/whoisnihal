@@ -16,7 +16,7 @@ const Header = () => {
           <GlobeHemisphereEastIcon size={20} /> Bengaluru, India
         </div>
         <div className="flex gap-2 items-center font-medium text-stone-400 mb-4">
-          <SuitcaseIcon size={20} /> Building <div className="text-accent flex items-center gap-1" > Rae</div>
+          <SuitcaseIcon size={20} /> Building <a target="_blank" href="https://www.raeai.app/" className="text-accent flex items-center gap-1 hover:underline " > @Rae</a>
         </div>
       </div>
     </div>
