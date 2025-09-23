@@ -13,8 +13,8 @@ const Work = ({company, title, date, description} : {
             <ArrowUpRightIcon size={20}/>
         </div>
         <div className='text-xl text-white '>{company}</div>
-        <div className='text-zinc-400 font-medium text-sm   flex gap-2 items-center' >{title} <div className='w-[1px] h-[10px] bg-zinc-500 translate-y-[2px]' ></div> {date}</div>
-        <div className='text-zinc-300 mt-1' >{description}</div>
+        <div className='text-stone-400 font-medium text-sm   flex gap-2 items-center' >{title} <div className='w-[1px] h-[10px] bg-stone-500 translate-y-[2px]' ></div> {date}</div>
+        <div className='text-stone-300 mt-1' >{description}</div>
     </div>
   )
 }

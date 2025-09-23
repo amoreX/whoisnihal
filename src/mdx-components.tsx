@@ -15,7 +15,7 @@ const components = {
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-gray-800 text-xl border-b border-zinc-600 w-fit dark:text-white font-medium  pb-2 mt-8 mb-3"
+      className="text-gray-800 text-xl border-b border-stone-600 w-fit dark:text-white font-medium  pb-2 mt-8 mb-3"
       {...props}
     />
   ),
@@ -27,17 +27,17 @@ const components = {
   ),
   h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
   p: (props: ParagraphProps) => (
-    <p className="text-gray-800 dark:text-zinc-300 leading-snug" {...props} />
+    <p className="text-gray-800 dark:text-stone-300 leading-snug" {...props} />
   ),
   ol: (props: ListProps) => (
     <ol
-      className="text-gray-800 dark:text-zinc-300  space-y-2"
+      className="text-gray-800 dark:text-stone-300  space-y-2"
       {...props}
     />
   ),
   ul: (props: ListProps) => (
     <ul
-      className="text-gray-800 dark:text-zinc-300  divide-y divide-white/20 w-full"
+      className="text-gray-800 dark:text-stone-300  space-y-2 w-full"
       {...props}
     />
   ),
@@ -103,7 +103,7 @@ const components = {
   ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
-      className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700 dark:border-zinc-600 dark:text-zinc-300"
+      className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700 dark:border-stone-600 dark:text-stone-300"
       {...props}
     />
   ),
