@@ -15,7 +15,7 @@ const components = {
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-gray-800  dark:text-zinc-200 font-medium border-b border-white/20 pb-2 mt-8 mb-3"
+      className="text-gray-800  dark:text-zinc-200 font-medium  pb-2 mt-8 mb-3"
       {...props}
     />
   ),
@@ -37,7 +37,7 @@ const components = {
   ),
   ul: (props: ListProps) => (
     <ul
-      className="text-gray-800 dark:text-zinc-300  space-y-0 w-full"
+      className="text-gray-800 dark:text-zinc-300  divide-y divide-white/20 w-full"
       {...props}
     />
   ),
@@ -50,7 +50,7 @@ const components = {
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      'hover:text-yellow-500 rounded-xl p-2 !w-full flex';
+      'hover:text-yellow-500 rounded-xl !w-full flex';
     if (href?.startsWith('/')) {
       return (
         <Link href={href} className={className} {...props}>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Instrument_Sans, Inter, Work_Sans } from "next/font/google";
+import { Geist, Geist_Mono, IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif, Instrument_Sans, Instrument_Serif, Inter, Noto_Serif, Playfair_Display, Poppins, Source_Serif_4, Work_Sans } from "next/font/google";
 import "./globals.css";
 
 
@@ -9,8 +9,13 @@ export const metadata: Metadata = {
   description: "Creating designer and Frontend developer",
 };
 
-const fontPrimary = Inter({
-  weight: ["100","200","300","400", "500","600","700", "800", "900"],
+const fontPrimary = IBM_Plex_Serif({
+  weight: ["400"],
+})
+
+const fontMono = IBM_Plex_Mono({
+  weight: ["100","200","300","400", "500","600","700"],
+  variable: "--font-ibm-plex-mono"
 })
 
 export default function RootLayout({
@@ -21,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fontPrimary.className}  antialiased flex justify-center`}
+        className={`${fontPrimary.className} ${fontMono.variable}  antialiased flex justify-center`}
       >
          <div className="max-w-4xl w-full px-4">
           {children}
