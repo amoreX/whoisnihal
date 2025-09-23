@@ -1,11 +1,15 @@
+"use client"
 import { ArrowElbowRightUpIcon } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <div className="w-full mt-12 select-none border-stone-800 border-2 border-b-0 overflow-hidden min-h-[250px] h-fit  pt-6  relative">
       <div className="size-full absolute pointer-events-none left-0 top-0 overflow-hidden mix-blend-lighten opacity-5 ">
-        <img
+        <Image
+            width={1000}
+            height={1000}
           src="/images/open-peeps.png"
           className="size-full object-cover"
           alt=""
@@ -22,9 +26,9 @@ const Footer = () => {
             >
               @next/mdx
             </a>
-            <div className="ml-auto size-[40px] flex items-center justify-center bg-stone-800 hover:bg-stone-700 hover:text-stone-200 cursor-pointer">
+            <button onClick={() => window.scrollTo(0, 0)} className="ml-auto size-[40px] flex items-center justify-center bg-stone-800 hover:bg-stone-700 hover:text-stone-200 cursor-pointer">
               <ArrowElbowRightUpIcon />
-            </div>
+            </button>
           </div>
         </div>
       </div>
