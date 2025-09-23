@@ -8,7 +8,7 @@ const NameReveal = () => {
     <div className="text-5xl  tracking-tighter inline relative">
         
 
-      {"ronish".split("").map((letter, index) => (
+      {"ronish rohan".split("").map((letter, index) => (
         <motion.div
           initial={{ opacity: 0, color: "rgb(255,0,0)" }}
           animate={{ opacity: 1, color: "rgb(255,255,255)" }}
