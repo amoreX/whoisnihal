@@ -27,9 +27,9 @@ const Title = () => {
           <AnimatePresence  initial={false} mode="popLayout">
             {title.split("").map((letter, index) => (
             <motion.div
-              initial={{ y: "-100%", scaleY: 0.2, opacity: 1 }}
+              initial={{ y: "100%", scaleY: 0.2, opacity: 1 }}
               animate={{ y: "0%", scaleY: 1, opacity: 1 }}
-              exit={{ y: "100%", scaleY: 0.2, opacity: 1}}
+              exit={{ y: "-100%", scaleY: 0.2, opacity: 1}}
               
               transition={{
                 delay: index * 0.005,
