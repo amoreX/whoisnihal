@@ -16,7 +16,7 @@ const Title = () => {
     } else if (pathname?.startsWith("/project")) {
       setTitle("projects");
     } else {
-      setTitle("ronish rohan");
+      setTitle("404");
     }
   }, [pathname])
   return (

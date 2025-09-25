@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${fontPrimary.className} ${fontMono.variable}  antialiased flex justify-center`}
       >
         {/* <Background /> */}
-         <div className="max-w-4xl w-full flex flex-col px-4 min-h-[100dvh] z-50">
+         <div className="max-w-4xl w-full flex flex-col px-4 min-h-[100dvh] z-50 relative">
           <Controls />
           <Title />
           {children}
