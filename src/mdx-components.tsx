@@ -51,7 +51,7 @@ const components = {
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      'hover:text-accent rounded-xl hover:underline !w-full items-center gap-2 inline group relative';
+      'hover:text-accent  hover:underline !w-full items-center gap-2 inline group relative';
     if (href?.startsWith('/')) {
       console.log(href);
       return (
