@@ -22,7 +22,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-mono: var(--font-ibm-plex-mono);
-  --color-accent: var(--color-accent)
+  --color-accent: var(--color-accent);
+  --animate-blur: blurUp 0.3s ease-out forwards;
+  
 }
 
 
