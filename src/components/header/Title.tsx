@@ -8,13 +8,7 @@ const Title = () => {
   const pathname = usePathname()
   const [key, setKey] = useState<number>(0);
   const [title, setTitle] = useState<string>("ronish rohan");
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setTitle("ronish rohan");
-      setKey((prev) => prev + 1);
-    }, 500);
-    return () => clearTimeout(timeout);
-  }, [])
+  
   useEffect(() => {
     setKey((prev) => prev + 1);
     if (pathname === "/") {
