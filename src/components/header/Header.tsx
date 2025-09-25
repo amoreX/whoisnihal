@@ -9,8 +9,8 @@ import Title from "./Title";
 
 const Header = () => {
   return (
-    <div className="mt-[150px] flex w-full flex-col">
-      <Title/>
+    <div className=" flex w-full flex-col">
+      
       <div className="w-full mt-6  flex flex-col">
         <div className="flex gap-2 items-center font-medium text-stone-400">
           <GlobeHemisphereEastIcon size={20} /> Bengaluru, India

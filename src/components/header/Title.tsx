@@ -2,8 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { usePathname } from "next/navigation";
 
 const Title = () => {
+  const pathname = usePathname()
   const [key, setKey] = useState<number>(0);
   const [title, setTitle] = useState<string>("ronish rohan");
   useEffect(() => {
@@ -13,8 +15,18 @@ const Title = () => {
     }, 500);
     return () => clearTimeout(timeout);
   }, [])
+  useEffect(() => {
+    setKey((prev) => prev + 1);
+    if (pathname === "/") {
+      setTitle("ronish rohan");
+    } else if (pathname?.startsWith("/project")) {
+      setTitle("projects");
+    } else {
+      setTitle("ronish rohan");
+    }
+  }, [pathname])
   return (
-    <div className="text-[56px] h-[60px] leading-[60px]  overflow-hidden tracking-tighter flex relative">
+    <div className="text-[56px] mt-[150px] select-none h-[60px] leading-[60px]  overflow-hidden tracking-tighter flex relative">
       
         <div className="opacity-0">{title}</div>
         <div className="absolute left-0 w-full top-0 flex">

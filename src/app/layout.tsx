@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif, Instru
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
 import Background from "@/components/background/Background";
+import Title from "@/components/header/Title";
 
 
 
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         {/* <Background /> */}
          <div className="max-w-4xl w-full flex flex-col px-4 min-h-[100dvh] z-50">
+          <Title />
           {children}
           <Footer />
          </div>
