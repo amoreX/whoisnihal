@@ -22,7 +22,7 @@ const components = {
   ),
   h3: (props: HeadingProps) => (
     <h3
-      className="text-gray-800 dark:text-white border-b border-stone-600 w-fit pb-1 font-medium mt-8 mb-3"
+      className="text-gray-800 dark:text-white w-fit pb-1 font-medium mt-8 mb-3"
       {...props}
     />
   ),
@@ -32,7 +32,7 @@ const components = {
   ),
   ol: (props: ListProps) => (
     <ol
-      className="text-gray-800 dark:text-zinc-300  space-y-2"
+      className="text-gray-800 dark:text-zinc-300   "
       {...props}
     />
   ),
@@ -51,7 +51,7 @@ const components = {
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
     const className =
-      'hover:text-accent rounded-xl hover:underline !w-full items-center gap-2 flex group';
+      'hover:text-accent rounded-xl hover:underline !w-full items-center gap-2 inline group relative';
     if (href?.startsWith('/')) {
       return (
         <Link href={href} className={className} {...props}>
@@ -71,10 +71,10 @@ const components = {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={className}
+        className={className }
         {...props}
       >
-        {children} <LinkIcon className='group-hover:opacity-100 opacity-0' />
+        {children} 
       </a>
     );
   },
