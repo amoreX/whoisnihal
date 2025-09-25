@@ -20,19 +20,19 @@ const Title = () => {
     }
   }, [pathname])
   return (
-    <div className="text-[56px] mt-[100px] select-none h-[60px] leading-[60px]  overflow-hidden tracking-tighter flex relative">
+    <div className="text-[56px] mt-[100px] select-none h-[64px] leading-[56px]  overflow-hidden tracking-tighter flex relative">
         
         <div className="opacity-0">{title}</div>
         <div className="absolute left-0 w-full top-0 flex">
           <AnimatePresence  initial={false} mode="popLayout">
             {title.split("").map((letter, index) => (
             <motion.div
-              initial={{ y: "-100%", scaleY: 0.2, opacity: 0 }}
+              initial={{ y: "-100%", scaleY: 0.2, opacity: 1 }}
               animate={{ y: "0%", scaleY: 1, opacity: 1 }}
-              exit={{ y: "100%", scaleY: 0.2, opacity: 0}}
+              exit={{ y: "100%", scaleY: 0.2, opacity: 1}}
               
               transition={{
-                delay: index * 0.01,
+                delay: index * 0.005,
                 type: "tween",
                 ease: "easeInOut",
               }}
