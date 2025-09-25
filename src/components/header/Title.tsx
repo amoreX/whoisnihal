@@ -26,8 +26,8 @@ const Title = () => {
     }
   }, [pathname])
   return (
-    <div className="text-[56px] mt-[150px] select-none h-[60px] leading-[60px]  overflow-hidden tracking-tighter flex relative">
-      
+    <div className="text-[56px] mt-[100px] select-none h-[60px] leading-[60px]  overflow-hidden tracking-tighter flex relative">
+        
         <div className="opacity-0">{title}</div>
         <div className="absolute left-0 w-full top-0 flex">
           <AnimatePresence  initial={false} mode="popLayout">

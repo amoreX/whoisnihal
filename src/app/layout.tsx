@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/footer/Footer";
 import Background from "@/components/background/Background";
 import Title from "@/components/header/Title";
+import Controls from "@/components/header/Controls";
 
 
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         {/* <Background /> */}
          <div className="max-w-4xl w-full flex flex-col px-4 min-h-[100dvh] z-50">
+          <Controls />
           <Title />
           {children}
           <Footer />
