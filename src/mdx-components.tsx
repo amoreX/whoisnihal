@@ -38,7 +38,7 @@ const components = {
   ),
   ul: (props: ListProps) => (
     <ul
-      className="text-gray-800 dark:text-zinc-300 animate-blur space-y-0 w-full"
+      className="text-gray-800 dark:text-zinc-300 animate-blur space-y-4 w-full"
       {...props}
     />
   ),
@@ -53,6 +53,7 @@ const components = {
     const className =
       'hover:text-accent rounded-xl hover:underline !w-full items-center gap-2 inline group relative';
     if (href?.startsWith('/')) {
+      console.log(href);
       return (
         <Link href={href} className={className} {...props}>
           {children} 

@@ -8,7 +8,7 @@ const Work = ({company, title, date, description} : {
     description: string
 }) => {
   return (
-    <div className='w-full relative my-2 flex flex-col group cursor-pointer hover:bg-stone-900/40 '>
+    <div className='w-full relative  flex flex-col group cursor-pointer hover:bg-stone-900/40 '>
         <div className='absolute group-hover:opacity-100 opacity-0 top-0 right-0 size-[32px] bg-stone-700 flex items-center justify-center' >
             <ArrowUpRightIcon size={20}/>
         </div>
