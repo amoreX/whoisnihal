@@ -1,10 +1,9 @@
-import type { Metadata } from "next";
-import { Cascadia_Code, Geist, Geist_Mono, IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif, Instrument_Sans, Instrument_Serif, Inter, Noto_Serif, Playfair_Display, Poppins, Source_Serif_4, Space_Mono, Work_Sans } from "next/font/google";
-import "./globals.css";
 import Footer from "@/components/footer/Footer";
-import Background from "@/components/background/Background";
-import Title from "@/components/header/Title";
 import Controls from "@/components/header/Controls";
+import Title from "@/components/header/Title";
+import type { Metadata } from "next";
+import { IBM_Plex_Mono } from "next/font/google";
+import "./globals.css";
 
 
 
