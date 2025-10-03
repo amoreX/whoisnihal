@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif, Instrument_Sans, Instrument_Serif, Inter, Noto_Serif, Playfair_Display, Poppins, Source_Serif_4, Work_Sans } from "next/font/google";
+import { Cascadia_Code, Geist, Geist_Mono, IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif, Instrument_Sans, Instrument_Serif, Inter, Noto_Serif, Playfair_Display, Poppins, Source_Serif_4, Space_Mono, Work_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
 import Background from "@/components/background/Background";
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   description: "Creating designer and Frontend developer",
 };
 
-const fontPrimary = IBM_Plex_Serif({
+const fontPrimary = IBM_Plex_Mono({
   weight: ["100","200","300","400", "500","600","700"],
 })
 
 const fontMono = IBM_Plex_Mono({
   weight: ["100","200","300","400", "500","600","700"],
   variable: "--font-ibm-plex-mono"
-})
+}) //literally no point of this 
 
 export default function RootLayout({
   children,
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${fontPrimary.className} ${fontMono.variable}  antialiased flex justify-center`}
       >
-        <Background />
+        {/* <Background /> */}
          <div className="max-w-4xl w-full flex flex-col px-4 min-h-[100dvh] z-50 relative">
           <Controls />
           <Title />

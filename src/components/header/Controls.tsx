@@ -29,7 +29,7 @@ const Controls = () => {
     })
     
   return (
-    <div className='flex gap-6 sticky top-0 bg-background z-[100] h-fit items-stretch select-none py-4  text-lg'>
+    <div className='flex gap-6 sticky top-0 bg-background z-[100] h-fit items-stretch select-none py-4  text-base'>
         <Control to="/" active={pathname === "/"}>[h] Home</Control>
         <Control to="/projects" active={pathname?.startsWith("/projects")}>[p] Projects</Control>
         <Control to="/blog" active={pathname?.startsWith("/blog")}>[b] Blog</Control>

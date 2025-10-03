@@ -16,7 +16,7 @@ const components = {
   ),
   h2: (props: HeadingProps) => (
     <h2
-      className="text-gray-800 text-xl border-b animate-blur border-stone-600 w-fit dark:text-white font-medium  pb-2 mt-8 mb-3"
+      className="text-gray-800 text-xl border-b-2 animate-blur border-accent w-fit dark:text-accent font-medium  pb-2 mt-8 mb-3"
       {...props}
     />
   ),

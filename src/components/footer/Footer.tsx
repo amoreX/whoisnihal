@@ -16,7 +16,7 @@ const Footer = () => {
             alt=""
           />
         </div>
-        <div className="size-full font-light text-[15vw] leading-[15vw] px-12 lg:text-9xl flex flex-col items-center text-stone-500">
+        <div className="size-full font-light text-[15vw] leading-[15vw] px-12 lg:text-[9.5vw] lg:leading-[9.5vw] flex flex-col items-center text-stone-500">
           ronish rohan
           <div className="mt-auto h-[100px] items-end w-full inline-flex text-lg pb-6 font-normal ">
             <div className="w-full flex items-center">
