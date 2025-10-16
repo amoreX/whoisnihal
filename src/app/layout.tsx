@@ -1,25 +1,24 @@
 import Footer from "@/components/footer/Footer";
 import Controls from "@/components/header/Controls";
 import Title from "@/components/header/Title";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import type { Metadata } from "next";
-import { IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
-
-
 
 export const metadata: Metadata = {
   title: "Ronish",
   description: "Creating designer and Frontend developer",
 };
 
-const fontPrimary = IBM_Plex_Mono({
-  weight: ["100","200","300","400", "500","600","700"],
-})
+const fontPrimary = Inter({
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
 
 const fontMono = IBM_Plex_Mono({
-  weight: ["100","200","300","400", "500","600","700"],
-  variable: "--font-ibm-plex-mono"
-}) //literally no point of this 
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  variable: "--font-ibm-plex-mono",
+}); //literally no point of this
 
 export default function RootLayout({
   children,
@@ -29,15 +28,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fontPrimary.className} ${fontMono.variable}  antialiased flex justify-center`}
+        className={`${fontPrimary.className} ${fontMono.variable} dark antialiased flex justify-center`}
       >
-        {/* <Background /> */}
-         <div className="max-w-4xl w-full flex flex-col px-4 min-h-[100dvh] z-50 relative">
-          <Controls />
-          <Title />
-          {children}
-          <Footer />
-         </div>
+        <ThemeProvider>
+          {/* <Background /> */}
+          <div className="max-w-4xl w-full flex flex-col px-4 min-h-[100dvh] z-50 relative">
+            <Controls />
+            <Title />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

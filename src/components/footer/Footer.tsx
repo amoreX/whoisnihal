@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="mt-auto">
-      <div className="w-full mt-12 select-none border-stone-800 backdrop-blur-lg border-2 border-b-0 overflow-hidden min-h-[250px] h-fit  pt-6  relative">
+      <div className="w-full mt-12 select-none border-footer-border backdrop-blur-lg border-2 border-b-0 overflow-hidden min-h-[250px] h-fit  pt-6  relative">
         <div className="size-full absolute pointer-events-none left-0 top-0 overflow-hidden mix-blend-lighten opacity-5 ">
           <Image
             width={1000}
@@ -16,7 +16,7 @@ const Footer = () => {
             alt=""
           />
         </div>
-        <div className="size-full font-light text-[15vw] leading-[15vw] px-12 lg:text-[9.5vw] lg:leading-[9.5vw] flex flex-col items-center text-stone-500">
+        <div className="size-full font-light text-[15vw] leading-[15vw] px-12 lg:text-[9.5vw] lg:leading-[9.5vw] flex flex-col items-center text-footer-text">
           ronish rohan
           <div className="mt-auto h-[100px] items-end w-full inline-flex text-lg pb-6 font-normal ">
             <div className="w-full flex gap-1 items-center">
@@ -24,13 +24,13 @@ const Footer = () => {
               <a
                 target="_blank"
                 href="https://nextjs.org/docs/13/app/building-your-application/configuring/mdx#nextmdx"
-                className="text-stone-400 hover:underline inline ml-1"
+                className="text-footer-link hover:underline inline ml-1"
               >
                 @next/mdx
               </a>
               <button
                 onClick={() => window.scrollTo(0, 0)}
-                className="ml-auto size-[40px] flex items-center justify-center bg-stone-800 hover:bg-stone-700 hover:text-stone-200 cursor-pointer"
+                className="ml-auto size-[40px] flex items-center justify-center bg-footer-button-bg hover:bg-footer-button-hover-bg text-footer-button-text cursor-pointer transition-colors duration-200"
               >
                 <ArrowElbowRightUpIcon />
               </button>

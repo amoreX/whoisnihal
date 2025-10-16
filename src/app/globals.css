@@ -1,67 +1,116 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --color-accent: #ff2b44;
-  --color-card: #f3f3f3;
-  --color-surface: #f3f3f3;
+/* Light theme (default) */
+.light {
+    --background: #ffffff;
+    --foreground: #171717;
+    --color-accent: #ff2b44;
+    --color-card: #f3f3f3;
+    --color-surface: #f3f3f3;
+    --text-primary: #1f2937;
+    --text-secondary: #374151;
+    --text-muted: #6b7280;
+    --border-color: #d1d5db;
+    --heading-accent: #1f2937;
+    --work-bg-hover: #f3f4f6;
+    --work-arrow-bg: #9ca3af;
+    --work-company: #1f2937;
+    --work-meta: #6b7280;
+    --work-description: #374151;
+    --footer-border: #d1d5db;
+    --footer-text: #6b7280;
+    --footer-link: #9ca3af;
+    --footer-button-bg: #e5e7eb;
+    --footer-button-hover-bg: #d1d5db;
+    --footer-button-text: #374151;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+/* Dark theme */
+.dark {
     --background: #0c0a09;
     --color-accent: #ff2b44;
     --foreground: #ededed;
     --color-card: #171717;
     --color-surface: #1f1f1f;
-  }
+    --text-primary: #ffffff;
+    --text-secondary: #d4d4d8;
+    --text-muted: #a1a1aa;
+    --border-color: #52525b;
+    --heading-accent: #ff2b44;
+    --work-bg-hover: rgba(41, 37, 36, 0.4);
+    --work-arrow-bg: #57534e;
+    --work-company: #ffffff;
+    --work-meta: #a8a29e;
+    --work-description: #d6d3d1;
+    --footer-border: #292524;
+    --footer-text: #78716c;
+    --footer-link: #a8a29e;
+    --footer-button-bg: #292524;
+    --footer-button-hover-bg: #44403c;
+    --footer-button-text: #d6d3d1;
+}
+
+:root {
+    --background: #0c0a09;
+    --color-accent: #ff2b44;
+    --foreground: #ededed;
+    --color-card: #171717;
+    --color-surface: #1f1f1f;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-mono: var(--font-ibm-plex-mono);
-  --color-accent: var(--color-accent);
-  --animate-blur: blurUp 0.3s ease-out forwards;
-  
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-mono: var(--font-ibm-plex-mono);
+    --color-accent: var(--color-accent);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-muted: var(--text-muted);
+    --color-border: var(--border-color);
+    --color-heading-accent: var(--heading-accent);
+    --color-work-bg-hover: var(--work-bg-hover);
+    --color-work-arrow-bg: var(--work-arrow-bg);
+    --color-work-company: var(--work-company);
+    --color-work-meta: var(--work-meta);
+    --color-work-description: var(--work-description);
+    --color-footer-border: var(--footer-border);
+    --color-footer-text: var(--footer-text);
+    --color-footer-link: var(--footer-link);
+    --color-footer-button-bg: var(--footer-button-bg);
+    --color-footer-button-hover-bg: var(--footer-button-hover-bg);
+    --color-footer-button-text: var(--footer-button-text);
+    --animate-blur: blurUp 0.3s ease-out forwards;
 }
-
-
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  
-  
+    background: var(--background);
+    color: var(--foreground);
 }
 
-::selection{
-  background-color: #ff2b44;
-  color: white;
-  font-weight: 900;
+::selection {
+    background-color: #ff2b44;
+    color: white;
+    font-weight: 900;
 }
 
-
-
-::-webkit-scrollbar-thumb{
-  width: 10px;
-  background-color: var(--color-card);
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: var(--color-card);
 }
 
-::-webkit-scrollbar-thumb:hover{
-  background-color: var(--color-surface);
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-surface);
 }
-::-webkit-scrollbar{
-  width: 0px;
+::-webkit-scrollbar {
+    width: 0px;
 }
 
-button:focus-visible{
-  outline: 1px solid var(--color-accent);
+button:focus-visible {
+    outline: 1px solid var(--color-accent);
 }
-a:focus-visible{
-  outline: 1px solid var(--color-accent);
+a:focus-visible {
+    outline: 1px solid var(--color-accent);
 }
-button{
-  outline: none;
+button {
+    outline: none;
 }
