@@ -21,9 +21,9 @@ const Title = () => {
       setTitle("projects");
     } else if (pathname?.startsWith("/blog/")) {
       setDisplay(false)
-      setTitle("blogs");
+      setTitle("blog");
     } else if (pathname?.startsWith("/blog")) {
-      setTitle("blogs");
+      setTitle("blog");
     } else {
       setTitle("404");
     }
