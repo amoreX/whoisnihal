@@ -1,13 +1,14 @@
 "use server"
 import { readdirSync, readFileSync } from "fs";
 import matter from "gray-matter";
+import { desc } from "motion/react-client";
 import path from "path";
 
 
 export async function getAllBlogs(){
     const folder = path.join(process.cwd(), "blog");
     const blogs = readdirSync(folder);
-    const data : {content: string, date: string, slug:string, title:string }[] = await Promise.all(blogs.map((blogFile) => {
+    const data : {content: string, date: string, slug:string, title:string,desc:string }[] = await Promise.all(blogs.map((blogFile) => {
         return getBlogBySlug(blogFile.replace(".mdx", ""));
     }))
     return data;
@@ -20,7 +21,7 @@ export async function getBlogBySlug(slug:string){
         slug,
         date: content.data.date || null,
         title: content.data.title || null,
-
+        desc: content.data.description || null,
         content: content.content
     }
 }

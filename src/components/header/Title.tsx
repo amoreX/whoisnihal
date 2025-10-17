@@ -30,8 +30,8 @@ const Title = () => {
   }, [pathname]);
   return (
     <>
-      {display === false ? (<div className="mt-[100px]" ></div>) : (
-        <div className="text-[56px] mt-[100px] select-none h-[64px] leading-[56px]  overflow-hidden tracking-tighter flex relative">
+      {display === false ? (<div className="mt-[50px] sm:mt-[100px]" ></div>) : (
+        <div className="sm:text-[56px]  sm:h-[64px] sm:leading-[32px] text-[32px]  h-[40px] leading-[32px] mt-[50px] sm:mt-[100px] select-none overflow-hidden tracking-tighter flex relative">
           <div className="opacity-0">{title}</div>
           <div className="absolute left-0 w-full top-0 flex">
             <AnimatePresence initial={false} mode="popLayout">

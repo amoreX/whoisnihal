@@ -12,10 +12,10 @@ const page = async () => {
           <Link
           href={"/blog/" + blog.slug}
             key={blog.slug}
-            className="w-full h-[40px] cursor-pointer flex justify-between group relative items-center"
+            className="w-full py-2 cursor-pointer flex sm:flex-row flex-col  justify-between group relative items-center"
           >
             <div className="absolute group-focus-visible:border-accent group-focus-visible:opacity-100 z-10 bg-border/20 w-[calc(100%+20px)] h-full left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-sm border border-border opacity-0 group-hover:opacity-100 transition-all duration-0" ></div>
-            <div className="z-40 flex justify-between size-full items-center">
+            <div className="z-40 flex sm:flex-row flex-col sm:items-center items-start justify-between size-full ">
               <div className="font-medium">{blog.title}</div>
               <div className="text-foreground/80 font-medium">{blog.date}</div>
             </div>

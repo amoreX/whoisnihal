@@ -18,10 +18,12 @@ const Work = ({
 
       <div className="flex flex-col size-full z-20">
         <div className="text-xl text-work-company font-medium">{company}</div>
-        <div className="text-work-meta font-medium text-sm flex gap-2 items-center">
+        <div className="text-work-meta font-medium text-sm flex sm:flex-row flex-col gap-0 sm:gap-2 items-start sm:items-center">
           {title}{" "}
-          <div className="w-[1px] h-[10px] bg-work-meta translate-y-[2px]"></div>{" "}
-          {date}
+          <div className="w-[1px] h-[10px] bg-work-meta hidden sm:flex translate-y-[2px]"></div>{" "}
+          <div>
+            {date}
+          </div>
         </div>
         <div className="text-work-description mt-1  max-w-[700px]">
           {description}
