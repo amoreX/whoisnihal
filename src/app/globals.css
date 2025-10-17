@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant light (&:where(.light, .light *));
+
 /* Light theme (default) */
 .light {
     --background: #ffffff;
@@ -7,19 +9,19 @@
     --color-accent: #ff2b44;
     --color-card: #f3f3f3;
     --color-surface: #f3f3f3;
-    --text-primary: #1f2937;
-    --text-secondary: #374151;
+    --text-primary: #171717;
+    --text-secondary: #171717;
     --text-muted: #6b7280;
-    --border-color: #d1d5db;
-    --heading-accent: #1f2937;
+    --border-color: #171717;
+    --heading-accent: #171717;
     --work-bg-hover: #f3f4f6;
     --work-arrow-bg: #9ca3af;
-    --work-company: #1f2937;
+    --work-company: #171717;
     --work-meta: #6b7280;
     --work-description: #374151;
     --footer-border: #d1d5db;
     --footer-text: #6b7280;
-    --footer-link: #9ca3af;
+    --footer-link: #171717;
     --footer-button-bg: #e5e7eb;
     --footer-button-hover-bg: #d1d5db;
     --footer-button-text: #374151;

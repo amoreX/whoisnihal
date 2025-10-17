@@ -6,8 +6,8 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="mt-auto">
-      <div className="w-full mt-12 select-none border-footer-border backdrop-blur-lg border-2 border-b-0 overflow-hidden min-h-[250px] h-fit  pt-6  relative">
-        <div className="size-full absolute pointer-events-none left-0 top-0 overflow-hidden mix-blend-lighten opacity-5 ">
+      <div className="w-full mt-12 flex select-none border-border/70 backdrop-blur-lg border-2 border-b-0 overflow-hidden  h-fit  pt-6  relative">
+        <div className="size-full z-10 absolute pointer-events-none left-0 top-0 overflow-hidden mix-blend-lighten light:opacity-30 dark:opacity-5 ">
           <Image
             width={1000}
             height={1000}
@@ -16,10 +16,9 @@ const Footer = () => {
             alt=""
           />
         </div>
-        <div className="size-full font-light text-[15vw] leading-[15vw] px-12 lg:text-[9.5vw] lg:leading-[9.5vw] flex flex-col items-center text-footer-text">
-          ronish rohan
-          <div className="mt-auto h-[100px] items-end w-full inline-flex text-lg pb-6 font-normal ">
-            <div className="w-full flex gap-1 items-center">
+        <div className="size-full z-20 font-light  px-12  flex flex-col items-center text-footer-text">
+          <div className="mt-auto items-end w-full inline-flex text-lg pb-6 font-normal ">
+            <div className="w-full flex gap-1 items-center text-foreground">
               Built using{" "}
               <a
                 target="_blank"

@@ -3,6 +3,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React, { ReactNode, useEffect, useRef } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Moon, Sun } from "@phosphor-icons/react";
+import { motion } from "motion/react";
 
 const Control = ({
   children,
@@ -17,7 +18,7 @@ const Control = ({
   return (
     <button
       onClick={() => router.push(to)}
-      className={`flex items-center  cursor-pointer justify-center ${active ? "text-accent" : "text-stone-400 hover:text-accent"}`}
+      className={`flex items-center cursor-pointer justify-center active:bg-accent/40 transition-colors ${active ? "text-accent" : "text-stone-400 light:text-stone-900"}`}
     >
       {children}
     </button>
@@ -78,12 +79,19 @@ const Controls = () => {
       </Control>
       <button
         onClick={toggleTheme}
-        className="flex items-center cursor-pointer justify-center text-stone-400 hover:text-accent"
+        className={`flex items-center cursor-pointer justify-center text-stone-400 light:text-stone-900 hover:text-accent active:bg-accent/40 transition-colors`}
+      >
+        [t] Theme
+      </button>
+      {/*<button
+        onClick={toggleTheme}
+        className="flex ml-auto items-center cursor-pointer justify-center text-stone-400 hover:text-accent"
         title={`[t] Switch to ${theme === "dark" ? "light" : "dark"} mode`}
         aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
       >
         {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-      </button>
+      </button>*/}
+
       <div className="absolute bg-gradient-to-b from-background to-transparent pointer-events-none size-full top-full left-0 "></div>
     </div>
   );
