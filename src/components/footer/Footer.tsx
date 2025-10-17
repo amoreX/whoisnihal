@@ -29,7 +29,7 @@ const Footer = () => {
               </a>
               <button
                 onClick={() => window.scrollTo(0, 0)}
-                className="ml-auto size-[40px] flex items-center justify-center bg-footer-button-bg hover:bg-footer-button-hover-bg text-footer-button-text cursor-pointer transition-colors duration-200"
+                className="ml-auto size-[40px] flex items-center justify-center bg-footer-button-bg hover:bg-footer-button-hover-bg text-footer-button-text cursor-pointer border border-border"
               >
                 <ArrowElbowRightUpIcon />
               </button>

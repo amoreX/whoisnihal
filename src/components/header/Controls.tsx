@@ -18,7 +18,7 @@ const Control = ({
   return (
     <button
       onClick={() => router.push(to)}
-      className={`flex items-center cursor-pointer justify-center active:bg-accent/40 transition-colors ${active ? "text-accent" : "text-stone-400 light:text-stone-900"}`}
+      className={`flex items-center cursor-pointer justify-center active:bg-accent/40  ${active ? "text-accent" : "text-stone-400 light:text-stone-900"}`}
     >
       {children}
     </button>
@@ -79,7 +79,7 @@ const Controls = () => {
       </Control>
       <button
         onClick={toggleTheme}
-        className={`flex items-center cursor-pointer justify-center text-stone-400 light:text-stone-900 hover:text-accent active:bg-accent/40 transition-colors`}
+        className={`flex items-center cursor-pointer justify-center text-stone-400 light:text-stone-900 hover:text-accent active:bg-accent/40 `}
       >
         [t] Theme
       </button>
