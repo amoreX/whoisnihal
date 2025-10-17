@@ -21,7 +21,7 @@ export const useTheme = () => {
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState<Theme>("dark"); // Default to dark
+  const [theme, setTheme] = useState<Theme>("light"); // Default to dark
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
