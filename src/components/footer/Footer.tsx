@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="mt-auto">
-      <div className="w-full mt-12 flex select-none border-border/70 backdrop-blur-lg border-2 border-b-0 overflow-hidden  h-fit  pt-6  relative">
+      <div className="w-full rounded-t-sm mt-12 flex select-none border-border/70 backdrop-blur-lg border border-b-0 overflow-hidden  h-fit  pt-6  relative">
         <div className="size-full z-10 absolute pointer-events-none left-0 top-0 overflow-hidden mix-blend-lighten light:opacity-30 dark:opacity-5 ">
           <Image
             width={1000}

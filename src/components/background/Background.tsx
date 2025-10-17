@@ -4,7 +4,7 @@ const Background = (props: React.SVGProps<SVGSVGElement>) => (
     
     viewBox="0 0 353 209"
     fill="none"
-    className="fixed size-[3000px]  fill-stone-900/10"
+    className="fixed size-[3000px]  fill-stone-900/40 blur-lg"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >

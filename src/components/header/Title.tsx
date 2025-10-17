@@ -15,7 +15,11 @@ const Title = () => {
       setTitle("ronish rohan");
     } else if (pathname?.startsWith("/project")) {
       setTitle("projects");
-    } else {
+    }
+    else if (pathname?.startsWith("/blog")) {
+      setTitle("blogs");
+    }
+     else {
       setTitle("404");
     }
   }, [pathname])

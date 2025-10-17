@@ -13,7 +13,7 @@ const Work = ({
   description: string;
 }) => {
   return (
-    <button className="w-full !outline-none  relative items-start text-left flex flex-col group cursor-pointer rounded-lg    transition-[background-color,padding] duration-75">
+    <button className="w-full !outline-none  relative items-start text-left flex flex-col group cursor-pointer transition-[background-color,padding] duration-75">
       <div className="absolute group-focus-visible:border-accent group-focus-visible:opacity-100 z-10 bg-border/20 w-[calc(100%+20px)] h-[calc(100%+10px)] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-sm border border-border opacity-0 group-hover:opacity-100 transition-all duration-0"></div>
 
       <div className="flex flex-col size-full z-20">
