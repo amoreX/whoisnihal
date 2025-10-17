@@ -1,0 +1,82 @@
+---
+title: This website is made with Markdown, why?
+description: Why I use Markdown for my portfolio website instead of pure React
+date: 17 October, 2025
+---
+
+This entire portfolio is powered by Markdown, not a CMS or a collection of React components. Just simple `.mdx` files.  
+Here’s why that approach makes sense.
+
+## Simplicity First
+
+I wanted to write content, not manage components or props. Markdown gives me that direct, minimal writing experience.  
+It feels like working in a personal notebook that just happens to render as a full website.
+
+No setup, no extra tooling, no distraction.
+
+Just:
+
+```bash
+---
+title: Hello World
+date: 17 October, 2025
+---
+My first blog post.
+```
+
+And it becomes a page.
+
+## MDX: Markdown with React Superpowers
+
+Markdown is great for text, but I still wanted to add React components where needed: interactive elements, code demos, or custom UI blocks.
+
+That’s why I use MDX with Next.js.
+
+MDX lets me mix content and components naturally:
+
+```mdx
+Here’s a counter inside a blog post:
+
+<Counter />
+```
+
+This allows me to build interactive sections without leaving the Markdown flow.
+
+## Easy Version Control
+
+All my posts are stored as `.mdx` files, which means they work seamlessly with Git.  
+I can track changes, create branches for drafts, and push updates like any other code commit.
+
+No database, no CMS dashboard, no authentication layers.  
+If I want to publish, I commit and deploy.
+
+## Performance and Portability
+
+Since the site is built at compile time, every page is static.  
+That means fast load times, no runtime dependencies, and easy hosting.
+
+I can deploy it to Vercel, GitHub Pages, or any static hosting service.  
+It’s lightweight and future-proof.
+
+## Developer Aesthetic
+
+Writing Markdown feels natural. It’s how developers document projects, write READMEs, and take notes.
+
+There’s no need for a visual editor when I can stay inside my code environment and keep full control over structure and styling.
+
+## The Stack
+
+Here’s what powers the site:
+
+- Next.js for the framework  
+- next-mdx-remote (or @next/mdx) for Markdown + React support  
+- Tailwind CSS for styling  
+- Framer Motion for animations  
+
+That’s the full setup.  
+No CMS, no plugins, no unnecessary complexity.
+
+## Closing Thoughts
+
+Building this site in Markdown keeps everything simple, flexible, and version-controlled.  
+It’s a reminder that sometimes, the simplest tools are still the best, especially when they integrate perfectly into a developer workflow.

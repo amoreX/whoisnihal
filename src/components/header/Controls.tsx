@@ -80,7 +80,7 @@ const Controls = () => {
       </Control>
       <button
         onClick={toggleTheme}
-        className={`flex items-center cursor-pointer justify-center text-stone-400 light:text-stone-900 hover:text-accent active:text-accent `}
+        className={`flex ml-auto items-center cursor-pointer justify-center text-stone-400 light:text-stone-900 hover:text-accent active:text-accent `}
       >
         [t] Theme
       </button>

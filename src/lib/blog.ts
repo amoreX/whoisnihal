@@ -1,24 +1,26 @@
+"use server"
 import { readdirSync, readFileSync } from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-export function getAllBlogs(){
+
+export async function getAllBlogs(){
     const folder = path.join(process.cwd(), "blog");
     const blogs = readdirSync(folder);
-    const data : {content: string, date: string, slug:string, title:string }[] = blogs.map((blogFile) => {
-        return getBlogBySlug(blogFile.replace(/\.mdx?$/, ''))
-    })
+    const data : {content: string, date: string, slug:string, title:string }[] = await Promise.all(blogs.map((blogFile) => {
+        return getBlogBySlug(blogFile.replace(".mdx", ""));
+    }))
     return data;
 }
 
-export function getBlogBySlug(slug:string){
+export async function getBlogBySlug(slug:string){
     const folder = path.join(process.cwd(), "blog");
     const content = readFileContent(folder + `/${slug}.mdx`);
     return {
         slug,
         date: content.data.date || null,
         title: content.data.title || null,
-            
+
         content: content.content
     }
 }

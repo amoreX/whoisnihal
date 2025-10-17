@@ -9,7 +9,7 @@ type ListItemProps = ComponentPropsWithoutRef<"li">;
 type AnchorProps = ComponentPropsWithoutRef<"a">;
 type BlockquoteProps = ComponentPropsWithoutRef<"blockquote">;
 
-const components = {
+export const components = {
   h1: (props: HeadingProps) => (
     <h1 className="font-medium pt-12 mb-0 animate-blur" {...props} />
   ),
@@ -76,16 +76,18 @@ const components = {
   code: ({ children, ...props }: ComponentPropsWithoutRef<"code">) => {
     const codeHTML = highlight(children as string);
     return (
-      <code
-        className="bg-background border border-border-custom px-2 py-1 rounded text-sm font-mono text-text-primary"
+      <div className="bg-border">
+        <code
+        className="border border-border px-2 py-1 rounded text-sm font-mono text-text-primary"
         dangerouslySetInnerHTML={{ __html: codeHTML }}
         {...props}
       />
+      </div>
     );
   },
   pre: ({ children, ...props }: ComponentPropsWithoutRef<"pre">) => (
     <pre
-      className="bg-background border border-border-custom p-4 rounded-lg overflow-x-auto text-sm font-mono text-text-primary my-4"
+      className="bg-background border border-border p-4 rounded-lg overflow-x-auto text-sm font-mono text-text-primary my-4"
       {...props}
     >
       {children}

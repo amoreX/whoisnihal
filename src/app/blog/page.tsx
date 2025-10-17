@@ -2,8 +2,8 @@ import { getAllBlogs } from "@/lib/blog";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
-  const blogs = getAllBlogs();
+const page = async () => {
+  const blogs = await getAllBlogs();
   console.log(blogs);
   return (
     <div className="pt-4 flex flex-col gap-1">
