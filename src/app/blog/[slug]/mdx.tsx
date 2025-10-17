@@ -29,6 +29,12 @@ const Mdx = ({ content }: { content: string }) => {
                 {children}
               </pre>
             ),
+            ul: (props: ComponentPropsWithoutRef<"ul">) => (
+              <ul className="list-disc ml-5 space-y-2 my-4 " {...props} />
+            ),
+            li: (props: ComponentPropsWithoutRef<"li">) => (
+              <li className="leading-7" {...props} />
+            ),
         }}
       />
     </div>
