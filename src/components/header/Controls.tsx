@@ -18,7 +18,7 @@ const Control = ({
   return (
     <button
       onClick={() => router.push(to)}
-      className={`flex items-center cursor-pointer justify-center active:bg-accent/40  ${active ? "text-accent" : "text-stone-400 light:text-stone-900"}`}
+      className={`flex items-center cursor-pointer hover:text-accent justify-center active:text-accent  ${active ? "text-accent" : "text-stone-400 light:text-stone-900"}`}
     >
       {children}
     </button>
@@ -67,6 +67,7 @@ const Controls = () => {
   }, [router]);
 
   return (
+    <>
     <div className="flex gap-6 sticky top-0 bg-background z-[100] h-fit items-stretch select-none py-4  text-base">
       <Control to="/" active={pathname === "/"}>
         [h] Home
@@ -79,7 +80,7 @@ const Controls = () => {
       </Control>
       <button
         onClick={toggleTheme}
-        className={`flex items-center cursor-pointer justify-center text-stone-400 light:text-stone-900 hover:text-accent active:bg-accent/40 `}
+        className={`flex items-center cursor-pointer justify-center text-stone-400 light:text-stone-900 hover:text-accent active:text-accent `}
       >
         [t] Theme
       </button>
@@ -92,8 +93,9 @@ const Controls = () => {
         {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
       </button>*/}
 
-      <div className="absolute bg-gradient-to-b from-background to-transparent pointer-events-none size-full top-full left-0 "></div>
+      
     </div>
+    <div className="fixed bg-gradient-to-b z-30 from-background via-background to-transparent pointer-events-none w-[100vw] h-[120px] top-0 left-0 "></div></>
   );
 };
 
