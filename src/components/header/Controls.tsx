@@ -68,21 +68,21 @@ const Controls = () => {
 
   return (
     <>
-    <div className="flex gap-6 sticky top-0 bg-background z-[100] h-fit items-stretch select-none py-4  text-base">
+    <div className="flex gap-6 sticky top-0 bg-background justify-between sm:justify-start z-[100] h-fit items-stretch select-none py-4  text-base">
       <Control to="/" active={pathname === "/"}>
-        [h] Home
+        <div className="hidden sm:flex" >[h]</div> Home
       </Control>
       <Control to="/projects" active={pathname?.startsWith("/projects")}>
-        [p] Projects
+         <div className="hidden sm:flex" >[p]</div> Projects
       </Control>
       <Control to="/blog" active={pathname?.startsWith("/blog")}>
-        [b] Blog
+         <div className="hidden sm:flex" >[b]</div> Blog
       </Control>
       <button
         onClick={toggleTheme}
-        className={`flex ml-auto items-center cursor-pointer justify-center text-stone-400 light:text-stone-900 hover:text-accent active:text-accent `}
+        className={`flex sm:ml-auto  items-center cursor-pointer justify-center text-stone-400 light:text-stone-900 hover:text-accent active:text-accent `}
       >
-        [t] Theme
+        <div className="hidden sm:flex" >[t]</div> Theme
       </button>
       {/*<button
         onClick={toggleTheme}
