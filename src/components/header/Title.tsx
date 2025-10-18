@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { usePathname } from "next/navigation";
 
-
 const Title = () => {
   const pathname = usePathname();
   const [key, setKey] = useState<number>(0);
@@ -13,14 +12,13 @@ const Title = () => {
 
   useEffect(() => {
     setKey((prev) => prev + 1);
-    setDisplay(true)
+    setDisplay(true);
     if (pathname === "/") {
-      
       setTitle("ronish rohan");
     } else if (pathname?.startsWith("/project")) {
       setTitle("projects");
     } else if (pathname?.startsWith("/blog/")) {
-      setDisplay(false)
+      setDisplay(false);
       setTitle("blog");
     } else if (pathname?.startsWith("/blog")) {
       setTitle("blog");
@@ -30,16 +28,18 @@ const Title = () => {
   }, [pathname]);
   return (
     <>
-      {display === false ? (<div className="mt-[50px] sm:mt-[100px]" ></div>) : (
-        <div className="sm:text-[56px]  sm:h-[64px] sm:leading-[32px] text-[32px]  h-[40px] leading-[32px] mt-[50px] sm:mt-[100px] select-none overflow-hidden tracking-tighter flex relative">
+      {display === false ? (
+        <div className="mt-[50px] sm:mt-[100px]"></div>
+      ) : (
+        <div className="sm:text-[56px]  sm:h-[80px] sm:leading-[40px] text-[32px]  h-[40px] leading-[32px] mt-[50px] sm:mt-[100px] select-none overflow-hidden tracking-tighter flex relative">
           <div className="opacity-0">{title}</div>
           <div className="absolute left-0 w-full top-0 flex">
             <AnimatePresence initial={false} mode="popLayout">
               {title.split("").map((letter, index) => (
                 <motion.div
-                  initial={{ y: "100%", scaleY: 0.2, opacity: 1 }}
+                  initial={{ y: "100%", scaleY: 0.2, opacity: 0 }}
                   animate={{ y: "0%", scaleY: 1, opacity: 1 }}
-                  exit={{ y: "-100%", scaleY: 0.2, opacity: 1 }}
+                  exit={{ y: "-100%", scaleY: 0.2, opacity: 0 }}
                   transition={{
                     delay: index * 0.005,
                     type: "tween",

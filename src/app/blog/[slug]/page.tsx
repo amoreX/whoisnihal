@@ -10,11 +10,14 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   console.log(blog);
   return (
     <div className="flex flex-col w-full h-fit">
-      <Link href={"/blog"} className="border text-sm border-border/70 hover:bg-border/20 cursor-pointer hover:border-border w-fit px-4 py-2 rounded-sm mb-4 flex gap-2 items-center ">
+      <Link
+        href={"/blog"}
+        className="border text-sm border-border/70 hover:bg-border/20 cursor-pointer hover:border-border w-fit px-4 py-2 rounded-sm mb-4 flex gap-2 items-center "
+      >
         <ArrowLeftIcon /> Back to all blogs
       </Link>
       <div className="text-4xl max-w-3/4 mb-4">{blog.title}</div>
-      <div className="text-lg text-text-muted mb-8">{blog.date}</div>
+      <div className="text-lg text-work-meta mb-8">{blog.date}</div>
       <Mdx content={blog.content} />
     </div>
   );

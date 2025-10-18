@@ -22,12 +22,12 @@ import "./globals.css";
 import Background from "@/components/background/Background";
 
 export const metadata: Metadata = {
-  title: "Ronish",
-  description: "Creating designer and Frontend developer",
+  title: "Ronish Rohan",
+  description: "Creative designer and Frontend developer",
 };
 
 const fontPrimary = Lora({
-  weight: [  "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const fontMono = IBM_Plex_Mono({
