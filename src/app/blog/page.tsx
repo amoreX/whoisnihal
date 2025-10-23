@@ -16,7 +16,7 @@ const page = async () => {
           >
             <div className="absolute group-focus-visible:border-accent group-focus-visible:opacity-100 z-10 bg-border/10 w-[calc(100%+20px)] h-full left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-sm border border-border opacity-0 group-hover:opacity-100 transition-all duration-0"></div>
             <div className="z-40 flex sm:flex-row flex-col sm:items-center items-start justify-between size-full ">
-              <div className="font-medium">{blog.title}</div>
+              <div className="font-medium text-xl">{blog.title}</div>
               <div className="text-work-meta font-medium">{blog.date}</div>
             </div>
           </Link>
