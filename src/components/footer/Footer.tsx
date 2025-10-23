@@ -1,13 +1,12 @@
 "use client";
 import { ArrowElbowRightUpIcon } from "@phosphor-icons/react/dist/ssr";
-import React from "react";
 import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="mt-auto">
       <div className="w-full rounded-t-sm mt-12 flex select-none border-border/70 backdrop-blur-lg border border-b-0 overflow-hidden  h-fit    relative">
-        <div className="size-full z-10 absolute pointer-events-none left-0 top-0 overflow-hidden mix-blend-lighten light:opacity-30 dark:opacity-5 ">
+        <div className="size-full z-10 absolute pointer-events-none left-0 top-0 overflow-hidden mix-blend-lighten light:opacity-10 dark:opacity-5 ">
           <Image
             width={1000}
             height={1000}
