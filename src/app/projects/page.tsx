@@ -8,7 +8,12 @@ const page = () => {
     console.log(date)
     const parsedDate = date.getDate() + " " + date.toLocaleString('default',{month: "long"}) + ", " + date.getFullYear() 
     return {...project, date: parsedDate}
-  })
+  }).sort((a, b) => {
+  const dateA = new Date(a.date).getTime()
+  const dateB = new Date(b.date).getTime()
+  return dateB - dateA // descending
+})
+
   return (
     <div className="pt-4 flex flex-col gap-1">
       {projects.map((project, index) => {
