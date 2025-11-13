@@ -4,6 +4,9 @@ import Link from "next/link";
 import React from "react";
 import Mdx from "./mdx";
 
+export const runtime = 'edge';
+
+
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug;
   const blog = await getBlogBySlug(slug);
