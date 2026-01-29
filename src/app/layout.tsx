@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "nihal",
-  description: "eng @ ghost. oss.",
+  description: "breaking something to build it better",
 };
 
 export default function RootLayout({
