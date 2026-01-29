@@ -12,7 +12,7 @@
     "@fontsource/space-mono": "^5.2.9",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^15.6.2",
+    "@next/mdx": "^15.1.0",
     "@phosphor-icons/react": "^2.1.10",
     "@types/mdx": "^2.0.13",
     "gray-matter": "^4.0.3",
@@ -32,7 +32,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "^15.6.2",
+    "eslint-config-next": "^15.1.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
