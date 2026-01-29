@@ -5,8 +5,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Nihal",
-  description: "Nihal Rahman - CS Student & Developer",
+  title: "nihal",
+  description: "eng @ ghost. oss.",
 };
 
 export default function RootLayout({
@@ -17,8 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-['Space_Mono'] dark h-fit antialiased">
-        <div className="bg-zinc-950 dark:bg-zinc-950 light:bg-white min-h-dvh flex lg:justify-center px-8">
-          <div className="lg:w-[50%] w-full flex flex-col">
+        <div className="bg-zinc-950 dark:bg-zinc-950 light:bg-white min-h-dvh flex lg:justify-center px-6 sm:px-10">
+          <div className="lg:w-[70%] xl:w-[55%] max-w-3xl w-full flex flex-col">
             <Navbar />
             {children}
           </div>

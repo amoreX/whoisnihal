@@ -7,10 +7,18 @@ interface ContactLinkProps {
 
 const ContactLink = ({ title, link }: ContactLinkProps) => {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
-      <div className="flex gap-1 text-zinc-300 dark:text-zinc-300 light:text-zinc-600 hover:text-white dark:hover:text-white light:hover:text-black items-center text-sm">
-        <div>{title}</div>
-        <ArrowUpRight size={12} />
+    <a 
+      href={link} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="group"
+    >
+      <div className="flex gap-1 text-zinc-400 hover:text-white dark:hover:text-white light:hover:text-black items-center text-sm transition-colors duration-200">
+        <div className="group-hover:underline underline-offset-4">{title}</div>
+        <ArrowUpRight 
+          size={12} 
+          className="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" 
+        />
       </div>
     </a>
   );

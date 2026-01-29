@@ -24,27 +24,31 @@
   --background: #09090b;
   --foreground: #ffffff;
   --color-accent: #a1a1aa;
-  --border-color: #3f3f46;
+  --border-color: #27272a;
   --text-primary: #ffffff;
   --text-secondary: #d4d4d8;
   --text-muted: #a1a1aa;
   --heading-accent: #ffffff;
   --work-meta: #71717a;
   --work-bg-hover: rgba(63, 63, 70, 0.4);
+  --accent-primary: #34d399;
+  --accent-secondary: #a78bfa;
 }
 
 /* Light theme */
 .light {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #09090b;
   --color-accent: #52525b;
-  --border-color: #d4d4d8;
+  --border-color: #e4e4e7;
   --text-primary: #09090b;
   --text-secondary: #3f3f46;
   --text-muted: #71717a;
   --heading-accent: #09090b;
   --work-meta: #71717a;
   --work-bg-hover: rgba(212, 212, 216, 0.4);
+  --accent-primary: #059669;
+  --accent-secondary: #7c3aed;
 }
 
 :root {
@@ -83,7 +87,22 @@ body {
   color: var(--foreground);
   font-family: 'Space Mono', monospace;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+}
+
+/* Subtle noise texture */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.015;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
 ::selection {
@@ -106,4 +125,33 @@ a:focus-visible {
 
 button:focus-visible {
   outline: 1px solid var(--color-accent);
+}
+
+/* Subtle fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger children animations - subtle */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
+
+/* Links */
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }

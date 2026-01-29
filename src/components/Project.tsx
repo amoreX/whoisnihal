@@ -13,17 +13,19 @@ const Project = ({ title, link, date, description }: ProjectProps) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex relative flex-col w-full h-20 rounded-lg group border-2 border-transparent hover:border-zinc-700 dark:hover:border-zinc-700 light:hover:border-zinc-300"
+      className="flex relative flex-col w-full h-fit min-h-[80px] rounded-lg group border border-zinc-800 dark:border-zinc-800 light:border-zinc-200 hover:border-zinc-600 dark:hover:border-zinc-600 light:hover:border-zinc-400 transition-all duration-200 hover:bg-zinc-900/50 dark:hover:bg-zinc-900/50 light:hover:bg-zinc-50 glow-hover"
     >
-      <div className="group-hover:opacity-100 opacity-0 absolute right-0 top-0 text-xs flex items-center bg-zinc-700 dark:bg-zinc-700 light:bg-zinc-200 p-1.5 rounded-bl-lg transition-opacity">
-        <ArrowUpRight size={12} />
+      <div className="group-hover:opacity-100 opacity-0 absolute right-2 top-2 text-xs flex items-center text-zinc-400 group-hover:text-white transition-all duration-200">
+        <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
       </div>
-      <div className="p-0 group-hover:p-2 transition-all duration-75">
-        <div className="flex lg:flex-row flex-col gap-2 text-base font-normal text-white dark:text-white light:text-black">
-          <div className="group-hover:underline">{title}</div>
-          <div className="text-zinc-400 text-xs">{date}</div>
+      <div className="p-3">
+        <div className="flex items-center gap-2 mb-1">
+          <div className="text-base font-medium text-white dark:text-white light:text-black group-hover:text-white">
+            {title}
+          </div>
+          <div className="text-zinc-600 text-xs font-normal">{date}</div>
         </div>
-        <p className="text-sm text-zinc-300 dark:text-zinc-300 light:text-zinc-600">{description}</p>
+        <p className="text-sm text-zinc-400 group-hover:text-zinc-300 transition-colors">{description}</p>
       </div>
     </a>
   );
