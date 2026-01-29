@@ -36,10 +36,10 @@ export default function Home() {
           >
             rae
           </a>
-          {" "}— cool desktop buddy/agent
+          {" "}- cool desktop buddy/agent
         </p>
         <p className="text-zinc-400">
-          i fw oss heavy —{" "}
+          i fw oss heavy -{" "}
           <span className="text-zinc-300">raycast</span>,{" "}
           <span className="text-zinc-300">ollama</span>,{" "}
           <span className="text-zinc-300">moltbot</span>
