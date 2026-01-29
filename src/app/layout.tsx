@@ -1,39 +1,13 @@
-import Footer from "@/components/footer/Footer";
-import Controls from "@/components/header/Controls";
-import Title from "@/components/header/Title";
-import { ThemeProvider } from "@/contexts/ThemeContext";
 import type { Metadata } from "next";
-import {
-  Bricolage_Grotesque,
-  Comic_Neue,
-  Comic_Relief,
-  DM_Sans,
-  IBM_Plex_Mono,
-  Inter,
-  Lora,
-  Merriweather,
-  Oswald,
-  Playfair_Display,
-  Quicksand,
-  Raleway,
-  Roboto_Slab,
-} from "next/font/google";
+import "@fontsource/space-mono/400.css";
+import "@fontsource/space-mono/700.css";
 import "./globals.css";
-import Background from "@/components/background/Background";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Ronish Rohan",
-  description: "Creative designer and Frontend developer",
+  title: "Nihal",
+  description: "Nihal Rahman - CS Student & Developer",
 };
-
-const fontPrimary = Lora({
-  weight: ["400", "500", "600", "700"],
-});
-
-const fontMono = IBM_Plex_Mono({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  variable: "--font-ibm-plex-mono",
-}); //literally no point of this
 
 export default function RootLayout({
   children,
@@ -42,18 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${fontPrimary.className} ${fontMono.variable} dark antialiased flex justify-center`}
-      >
-        <ThemeProvider>
-          <Background />
-          <div className="max-w-4xl w-full flex flex-col px-4 min-h-[100dvh] z-50 relative">
-            <Controls />
-            <Title />
+      <body className="font-['Space_Mono'] dark h-fit antialiased">
+        <div className="bg-zinc-950 dark:bg-zinc-950 light:bg-white min-h-dvh flex lg:justify-center px-8">
+          <div className="lg:w-[50%] w-full flex flex-col">
+            <Navbar />
             {children}
-            <Footer />
           </div>
-        </ThemeProvider>
+        </div>
       </body>
     </html>
   );
