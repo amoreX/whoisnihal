@@ -98,7 +98,7 @@ export default function Home() {
         <p className="text-zinc-400">
           projects @{" "}
           <a 
-            href="https://github.com/whoisnihal" 
+            href="https://github.com/amoreX/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-zinc-300 hover:text-white transition-colors"
