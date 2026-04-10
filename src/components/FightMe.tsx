@@ -19,7 +19,7 @@ const FightMe = ({ blogTitle }: { blogTitle: string }) => {
     <div className="mt-16 pt-8 border-t border-zinc-800">
       <h3 className="text-sm text-zinc-400 mb-1">disagree?</h3>
       <p className="text-xs text-zinc-600 mb-4">
-        write what you wanna fight about and i&apos;ll read it. probably.
+        write what you wanna fight about and i&apos;ll read it.
       </p>
       <textarea
         value={message}
