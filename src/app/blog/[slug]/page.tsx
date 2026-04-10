@@ -3,6 +3,7 @@ import { ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import React from "react";
 import Mdx from "./mdx";
+import FightMe from "@/components/FightMe";
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug;
@@ -19,6 +20,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <div className="text-4xl max-w-3/4 mb-4">{blog.title}</div>
       <div className="text-lg text-work-meta mb-8">{blog.date}</div>
       <Mdx content={blog.content} />
+      <FightMe blogTitle={blog.title} />
     </div>
   );
 };

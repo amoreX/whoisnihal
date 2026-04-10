@@ -10,6 +10,7 @@ export async function getAllBlogs(){
     const data : {content: string, date: string, slug:string, title:string,desc:string }[] = await Promise.all(blogs.map((blogFile) => {
         return getBlogBySlug(blogFile.replace(".mdx", ""));
     }))
+    data.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     return data;
 }
 
