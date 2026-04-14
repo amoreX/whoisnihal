@@ -18,7 +18,7 @@ export default function Home() {
         <p className="text-zinc-400">
           currently cloning @{" "}
           <a 
-            href="https://ghost.engineer" 
+            href="https://tryghost.ai/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-emerald-400 hover:text-emerald-300 transition-colors"
